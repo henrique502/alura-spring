@@ -4,7 +4,6 @@
   <groupId>org.alura.spring</groupId>
   <artifactId>alura-spring</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <packaging>war</packaging>
   <build>
     <finalName>alura-spring</finalName>
   </build>
@@ -14,4 +13,24 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <dependencies>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-web</artifactId>
+	    <version>2.0.2.RELEASE</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+	    <version>2.0.2.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<optional>true</optional>
+	</dependency>
+
+  </dependencies>
 </project>
