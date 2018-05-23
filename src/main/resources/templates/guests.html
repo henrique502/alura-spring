@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Convidados</title>
+<link href="css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>Hey!!</h1>
+		</div>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>E-mail</th>
+				<th>Telefone</th>
+				<th>Criado em</th>
+				<th>Atualizado em</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="guest : ${guests}">
+				<td th:text="${guest.name}" />
+				<td th:text="${guest.email}" />
+				<td th:text="${guest.phone}" />
+				<td th:text="${#dates.format(guest.createdAt, 'dd-MM-yyyy HH:mm')}" />
+				<td th:text="${#dates.format(guest.updatedAt, 'dd-MM-yyyy HH:mm')}" />
+				<td>
+					Actions
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
