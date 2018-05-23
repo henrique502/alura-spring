@@ -1,10 +1,14 @@
 package org.alura.spring.model;
 
-import java.sql.Date;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity(name="guest")
 public class Guest {
@@ -16,7 +20,12 @@ public class Guest {
 	private String email;
 	private String phone;
 	
+	@Column(name = "createdAt", insertable = false, updatable = false)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdAt;
+	
+	@Column(name = "updatedAt", insertable = false, updatable = false)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedAt;
 	
 	public Long getId() { return id; }
